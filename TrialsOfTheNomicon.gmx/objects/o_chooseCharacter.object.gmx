@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>ui_label</parentName>
+  <parentName>ui_button</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,21 +25,26 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
+            <string>///do pointless things
+event_inherited();
 
-uiTextValue='Play';
-uiAlign=fa_left;
-uiFont=f_menuOptions;
-uiTextColor=c_black;
-uiBackColor2=c_white;
+uiTextValue='Choose';
+uiAlign=fa_center;
+uiFont=f_buttons;
+uiTextColor=c_white;
 uiDrawShadows=2;
 uiDrawOutlines=2;
+uiBackColor = c_blue;    
+uiBackColor2 = c_navy;
+uiDownColor = c_navy;
+
+script_addListener("nm_" + string(nm_matchstart), script_handleMatchStart);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="11">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -56,30 +61,17 @@ uiDrawOutlines=2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>uiTextColor=c_black;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="10">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>uiTextColor=c_teal;
+            <string>var char = instance_find(o_CharacterSelect, 0);
+
+var cIndex = char.itemindex;
+
+if ( char &amp;&amp; cIndex == -1 ) {
+    uiEnabled = false;
+    uiBackColor = c_gray;
+} else {
+    uiEnabled = true;
+    uiBackColor = c_blue;
+}
 </string>
           </argument>
         </arguments>
@@ -88,21 +80,42 @@ uiDrawOutlines=2;
     <event eventtype="6" enumb="7">
       <action>
         <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>11</kind>
-            <room>room1</room>
+            <kind>1</kind>
+            <string>var data = ds_map_create();
+var char = instance_find(o_CharacterSelect, 0);
+
+ds_map_add(data, "character", char.itemindex);
+script_sendMsg(nm_play, data);
+
+char.uiVisible = false;
+
+var banner = instance_find(o_chooseBannerText, 0);
+banner.uiVisible = false;
+
+uiVisible=false;
+
+var announce = instance_find(o_announceBanner, 0);
+announce.visible = false;
+
+var button = instance_find(o_cancel, 0);
+button.x -= 150;
+
+var search = instance_find(o_searchingText, 0);
+search.uiVisible = true;
+</string>
           </argument>
         </arguments>
       </action>

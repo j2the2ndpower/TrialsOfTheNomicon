@@ -28,7 +28,7 @@
             <string>///do pointless things
 event_inherited();
 
-uiTextValue='Searching for Opponent...';
+uiTextValue='Choose Your Hero';
 uiAlign=fa_center;
 uiFont=f_menuOptions;
 uiTextColor=c_white;
@@ -36,10 +36,10 @@ uiBackColor2=c_black;
 uiDrawShadows=2;
 uiDrawOutlines=2;
 
-uiPulse = 0.1;
-uiEasePulseDur = 120;
-uiPulseJello = true;
-uiAnimated = true;
+//uiPulse = 0.1;
+//uiEasePulseDur = 120;
+//uiPulseJello = true;
+//uiAnimated = true;
 </string>
           </argument>
         </arguments>

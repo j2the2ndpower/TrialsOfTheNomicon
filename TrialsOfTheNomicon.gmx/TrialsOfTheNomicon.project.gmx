@@ -19,6 +19,9 @@
         <sprite>sprites\s_archangel_run</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\s_announceBanner</sprite>
+    <sprite>sprites\s_ShandaProfile</sprite>
+    <sprite>sprites\s_ArchAngelProfile</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -27,14 +30,26 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\fn_initGame.gml</script>
+    <scripts name="Net">
+      <script>scripts\script_getMsg.gml</script>
+      <script>scripts\script_connected.gml</script>
+      <script>scripts\script_connect.gml</script>
+      <script>scripts\script_sendMsg.gml</script>
+    </scripts>
+    <scripts name="Listeners">
+      <script>scripts\script_addListener.gml</script>
+      <script>scripts\script_removeListener.gml</script>
+      <script>scripts\script_fireEvent.gml</script>
+    </scripts>
+    <script>scripts\script_handleMatchStart.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_menuOptions</font>
     <font>fonts\font_ui</font>
     <font>fonts\f_buttons</font>
+    <font>fonts\f_selectChar</font>
   </fonts>
   <objects name="objects">
-    <object>objects\o_control</object>
     <objects name="ui">
       <object>objects\ui_defaults</object>
       <object>objects\ui_ani_control</object>
@@ -67,11 +82,19 @@
     </objects>
     <objects name="loadingScreen">
       <object>objects\o_cancel</object>
-      <object>objects\o_searching</object>
+      <object>objects\o_chooseCharacter</object>
+      <object>objects\o_chooseBannerText</object>
+      <object>objects\o_searchingText</object>
+      <object>objects\o_announceBanner</object>
+      <object>objects\o_CharacterSelect</object>
     </objects>
     <objects name="gameScreen">
       <object>objects\o_player</object>
       <object>objects\o_wall</object>
+    </objects>
+    <objects name="Global">
+      <object>objects\o_control</object>
+      <object>objects\o_net</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -79,6 +102,16 @@
     <room>rooms\room1</room>
     <room>rooms\room2</room>
   </rooms>
+  <constants number="8">
+    <constant name="nm_test">300</constant>
+    <constant name="nm_connect">1</constant>
+    <constant name="nm_play">3</constant>
+    <constant name="nm_matchstart">4</constant>
+    <constant name="nm_param_string">1</constant>
+    <constant name="nm_param_int32">2</constant>
+    <constant name="nm_param_float">3</constant>
+    <constant name="nm_param_binary">4</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
