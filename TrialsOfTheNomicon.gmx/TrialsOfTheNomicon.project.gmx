@@ -91,6 +91,7 @@
     <objects name="gameScreen">
       <object>objects\o_player</object>
       <object>objects\o_wall</object>
+      <object>objects\o_healthbar</object>
     </objects>
     <objects name="Global">
       <object>objects\o_control</object>
