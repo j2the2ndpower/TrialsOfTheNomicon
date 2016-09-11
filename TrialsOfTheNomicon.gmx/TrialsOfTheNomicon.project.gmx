@@ -98,8 +98,10 @@
     </objects>
     <objects name="gameScreen">
       <object>objects\o_player</object>
+      <object>objects\o_enemy</object>
       <object>objects\o_wall</object>
       <object>objects\o_healthbar</object>
+      <object>objects\o_gameControl</object>
     </objects>
     <objects name="Global">
       <object>objects\o_control</object>

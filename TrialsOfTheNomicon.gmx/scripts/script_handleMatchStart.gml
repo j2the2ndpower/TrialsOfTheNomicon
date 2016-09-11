@@ -12,6 +12,7 @@ if (ds_exists(data, ds_type_map)) {
         
         sText.matchId = data[? "matchID"];
         sText.opponentCharacter = data[? "opponent"];
+        sText.position = data[? "position"];
         sText.alarm[0] = 20;
     }
 }
