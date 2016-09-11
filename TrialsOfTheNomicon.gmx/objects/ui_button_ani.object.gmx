@@ -433,7 +433,7 @@ if uiFlashButton then
    }    
 
 sprxscale=uiSpriteScale;
-spryscale=uiSpriteScale; 
+spryscale=uiSpriteScale;
 
       
 if curSprite&gt;=0 then
@@ -453,7 +453,16 @@ if curSprite&gt;=0 then
                                spryscale= sprite_height / (sprite_get_height(curSprite));
                                sprx=px+ (sprite_get_xoffset(curSprite)* sprxscale);
                                spry=py+ (sprite_get_yoffset(curSprite)* spryscale);  
-                             }                              
+                             }                  
+                             
+         if (uiXscale != 1) {
+            sprxscale = uiXscale;
+         }
+         
+         if (uiYscale != 1) {
+            spryscale = uiYscale;
+         }
+         
          sprrot=uiSpriteAngle + uiAniWobble;
          sprx=sprx+bx;
          spry=spry+by; 

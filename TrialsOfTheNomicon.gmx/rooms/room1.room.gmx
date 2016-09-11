@@ -57,6 +57,7 @@
     <instance objName="o_CharacterSelect" x="864" y="448" name="inst_CF1DBE12" locked="0" code="" scaleX="6" scaleY="4.12903213500977" colour="4294967295" rotation="0"/>
     <instance objName="o_chooseCharacter" x="736" y="832" name="inst_ABCDB5B8" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_searchingText" x="64" y="256" name="inst_E0E5CC5D" locked="0" code="" scaleX="56" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="o_vsText" x="832" y="352" name="inst_61980902" locked="0" code="" scaleX="8" scaleY="7" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
