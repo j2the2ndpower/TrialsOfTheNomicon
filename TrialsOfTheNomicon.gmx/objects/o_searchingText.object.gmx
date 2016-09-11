@@ -70,6 +70,7 @@ if (instance_exists(o_gameControl)) {
     game.character = character;
     game.opponent = opponentCharacter;
     game.position = position;
+    game.matchId = matchId;
     game.alarm[0] = 1;
 }
 </string>

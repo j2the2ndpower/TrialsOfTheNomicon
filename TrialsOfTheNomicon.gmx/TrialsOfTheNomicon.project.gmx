@@ -45,6 +45,7 @@
       <script>scripts\script_fireEvent.gml</script>
     </scripts>
     <script>scripts\script_handleMatchStart.gml</script>
+    <script>scripts\script_handleEnemyMove.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_menuOptions</font>
@@ -113,11 +114,12 @@
     <room>rooms\room1</room>
     <room>rooms\room2</room>
   </rooms>
-  <constants number="8">
+  <constants number="9">
     <constant name="nm_test">300</constant>
     <constant name="nm_connect">1</constant>
     <constant name="nm_play">3</constant>
     <constant name="nm_matchstart">4</constant>
+    <constant name="nm_move">5</constant>
     <constant name="nm_param_string">1</constant>
     <constant name="nm_param_int32">2</constant>
     <constant name="nm_param_float">3</constant>

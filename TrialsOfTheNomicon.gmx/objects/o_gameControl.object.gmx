@@ -25,11 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player1 = noone;
+            <string>matchId = -1;
+player1 = noone;
 player2 = noone;
 character = -1;
 opponent = -1;
 position = -1;
+
+script_addListener("nm_" + string(nm_move), script_handleEnemyMove);
 </string>
           </argument>
         </arguments>
