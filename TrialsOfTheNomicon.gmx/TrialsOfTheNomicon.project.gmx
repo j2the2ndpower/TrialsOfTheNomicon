@@ -13,15 +13,18 @@
       <sprites name="shagra">
         <sprite>sprites\s_shagra</sprite>
         <sprite>sprites\s_shagra_run</sprite>
+        <sprite>sprites\s_shagra_full</sprite>
       </sprites>
       <sprites name="archangle">
         <sprite>sprites\s_archangel</sprite>
         <sprite>sprites\s_archangel_run</sprite>
+        <sprite>sprites\s_archangel_full</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\s_announceBanner</sprite>
     <sprite>sprites\s_ShandaProfile</sprite>
     <sprite>sprites\s_ArchAngelProfile</sprite>
+    <sprite>sprites\s_titleText</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -48,6 +51,7 @@
     <font>fonts\font_ui</font>
     <font>fonts\f_buttons</font>
     <font>fonts\f_selectChar</font>
+    <font>fonts\f_vs</font>
   </fonts>
   <objects name="objects">
     <objects name="ui">
@@ -79,6 +83,7 @@
       <objects name="buttons">
         <object>objects\o_playButton</object>
       </objects>
+      <object>objects\o_titleText</object>
     </objects>
     <objects name="loadingScreen">
       <object>objects\o_cancel</object>
@@ -87,6 +92,9 @@
       <object>objects\o_searchingText</object>
       <object>objects\o_announceBanner</object>
       <object>objects\o_CharacterSelect</object>
+      <object>objects\o_shagraFull</object>
+      <object>objects\o_archanFull</object>
+      <object>objects\o_vsText</object>
     </objects>
     <objects name="gameScreen">
       <object>objects\o_player</object>
