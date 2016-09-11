@@ -73,10 +73,10 @@ if (facing == -1) {
     if (animation_index &gt;= 8) {
         animation_index = 0;
     }
-}
+}*/
 
 healthbar.x = x-50
-healthbar.y = y-40*/
+healthbar.y = y-40
 
 
 </string>

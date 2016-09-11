@@ -28,6 +28,7 @@
             <string>image_speed = 0;
 healthbar = instance_create(x, y-30,o_healthbar);
 animation_index = 0;
+net_tick = 0
 </string>
           </argument>
         </arguments>
@@ -74,14 +75,18 @@ if (facing == -1) {
         animation_index = 0;
     }
     
-    //update server with position
-    var data = ds_map_create();
-    var game = instance_find(o_gameControl,0);
-    ds_map_add(data, "matchId", game.matchId);
-    ds_map_add(data, "position", game.position);
-    ds_map_add(data, "x", x);
-    ds_map_add(data, "y", y);
-    script_sendMsg(nm_move, data);
+    if (net_tick &gt;= 4) {
+        //update server with position
+        var data = ds_map_create();
+        var game = instance_find(o_gameControl,0);
+        ds_map_add(data, "matchId", game.matchId);
+        ds_map_add(data, "position", game.position);
+        ds_map_add(data, "x", x);
+        ds_map_add(data, "y", y);
+        script_sendMsg(nm_move, data);
+    }
+    
+    net_tick++;
 }
 
 healthbar.x = x-50
